@@ -1,0 +1,39 @@
+/* 
+Theme Name: Agronegocios del Sur WP Theme
+Text Domain: Agronegocios del Sur WP Theme
+Version: 1.0
+Description: Agronegocios del Sur Wordpress theme.
+Tags: responsive, theme, wordpress
+Author: lopezrunco / Creativo Multimedia
+Author URI: https://github.com/lopezrunco
+*/
+
+@import './Variables.scss';
+@import './general';
+@import './text';
+@import './buttons';
+@import './form';
+@import './top';
+@import './nav';
+@import './hero';
+@import './image-slider';
+@import './blog';
+@import './product-categories';
+@import './product-grid';
+@import './news-grid';
+@import './call-to-action';
+@import './call-to-action-wapp';
+@import './food-brands';
+@import './testimonials';
+@import './our-values';
+@import './featured-services';
+@import './services-page';
+@import './staff-grid';
+@import './search-results';
+@import './comments';
+@import './pagination';
+@import './bottom.scss';
+@import './footer';
+@import './whatsapp-link';
+@import './bag-popup';
+@import './animations';

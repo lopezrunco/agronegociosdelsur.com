@@ -1,0 +1,56 @@
+@import './Variables.scss';
+
+.blog-nav {
+    a {
+        background: var(--primary);
+        color: #fff;
+        font-size: 1rem;
+        padding: 1rem;
+        font-weight: bold;
+        position: relative;
+
+        &:hover {
+            background: var(--secondary);
+        }
+
+    }
+
+    .nav-link-prev {
+        border-right: 1px solid var(--secondary);
+    }
+
+    .arrow-prev {
+        position: absolute;
+        left: 1rem;
+        top: 1.25rem;
+        color: #fff
+    }
+
+    .arrow-next {
+        position: absolute;
+        right: 1rem;
+        top: 1.25rem;
+        color: #fff
+    }
+}
+
+.content {
+    .title {
+        font-weight: bold;
+        font-size: 2rem
+    }
+
+    .image-caption {
+        color: #8f8f8f;
+        font-size: 0.875rem;
+
+        a {
+            color: #8f8f8f;
+            text-decoration: underline;
+
+            &:hover {
+                color: var(--secondary)
+            }
+        }
+    }
+}

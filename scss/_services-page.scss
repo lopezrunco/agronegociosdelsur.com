@@ -1,0 +1,25 @@
+.services-page {
+    text-align: center;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .icon-wrapper {
+            background-color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5rem;
+            width: 5rem;
+
+            .icon {
+                font-size: 2rem;
+                color: var(--white);
+            }
+        }
+    }
+}

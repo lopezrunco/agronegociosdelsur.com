@@ -1,0 +1,3 @@
+<div class="bg-primary">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25517.552489363698!2d-56.166678735456934!3d-34.89036941498789!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80ffc63bf7d3%3A0x6b321b2e355bec99!2sMontevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay!5e0!3m2!1ses-419!2sin!4v1717759775551!5m2!1ses-419!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>

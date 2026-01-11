@@ -1,0 +1,178 @@
+.slider-content {
+    position: relative;
+    height: calc(90vh - 120px);
+    overflow: hidden;
+    z-index: 1;
+
+    .slide {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        background-size: cover;
+        background-position: center;
+        animation: slide 2s ease;
+        z-index: -1;
+
+        .slider-caption {
+            max-width: var(--content-max-width);
+            margin: auto;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 100%;
+            padding-top: 5rem;
+
+            .caption {
+                width: 98%;
+                text-align: left;
+
+                h1 {
+                    color: var(--white);
+                    text-shadow: var(--text-shadow);
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
+
+
+                }
+
+                h6 {
+                    margin: 2rem 0;
+                    color: var(--white);
+                    text-shadow: var(text-shadow);
+                }
+
+                a.btn {
+                    width: fit-content;
+                }
+            }
+        }
+
+        &.active {
+            display: flex;
+
+            .caption {
+                h1 {
+                    opacity: 0;
+                    animation: captionText 0.5s ease forwards;
+                    animation-delay: 1s;
+                }
+
+                h6 {
+                    opacity: 0;
+                    animation: captionText 0.5s ease forwards;
+                    animation-delay: 1.2s;
+                }
+
+                a {
+                    opacity: 0;
+                    animation: captionText 0.5s ease forwards;
+                    animation-delay: 1.4s;
+                }
+            }
+        }
+    }
+
+    .arrow-controls {
+        display: none;
+
+        .prev,
+        .next {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 130px;
+            width: 50px;
+            color: #ffffff8a;
+            text-align: center;
+            line-height: 130px;
+            font-size: 30px;
+            border-radius: var(--border-radius);
+            margin: 0 .5rem;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: var(--white-transparent);
+        }
+
+    }
+
+    .position {
+        position: absolute;
+        right: 50%;
+        bottom: 2rem;
+        transform: translateX(50%);
+        display: flex;
+        flex-direction: row;
+
+        div {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            border: 3px solid var(--white-semi-transparent);
+            border-radius: 50%;
+            color: transparent;
+            cursor: pointer;
+            transition: var(--transition);
+
+            &.active {
+                background-color: var(--white-semi-transparent);
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .slider-content {
+        .slide {
+            .slider-caption {
+                padding-top: 0;
+                height: auto;
+                justify-content: center;
+
+                .caption {
+                    width: 40%;
+                    text-align: left;
+
+                    h1 {
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+
+        .position {
+            right: 10rem !important;
+            bottom: 50% !important;
+            transform: translateY(50%);
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .slider-content {
+        .arrow-controls {
+            display: block;
+        }
+    }
+}

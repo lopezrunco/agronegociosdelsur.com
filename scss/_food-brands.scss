@@ -1,0 +1,36 @@
+.food-brands {
+    padding-top: 0;
+
+    .wrapper {
+        border-radius: var(--border-radius);
+        overflow: hidden;
+
+        .paws-overlay {
+            .dark-gradient-overlay {
+                padding: 4rem 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: var(--main-transition);
+
+                &:hover {
+                    transform: scale(1.025);
+                }
+
+                h2 {
+                    color: var(--white);
+                }
+
+                span {
+                    color: var(--secondary);
+                }
+
+                img {
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}

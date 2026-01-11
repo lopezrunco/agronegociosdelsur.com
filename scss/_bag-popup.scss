@@ -1,0 +1,51 @@
+.bag-popup {
+  position: relative;
+  display: inline-block;
+  bottom: 1.5rem;
+  background-color: var(--green);
+  border-radius: 5px;
+  transition: var(--main-transition);
+  z-index: 999;
+
+  &:hover,
+  &:active {
+    background-color: var(--gray-dark);
+  }
+
+  a.add-bag-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    color: var(--white) !important;
+
+    img {
+      display: none;
+    }
+
+    p {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bag-popup {
+    position: relative;
+
+    a.add-bag-button {
+      align-items: center;
+      gap: 1rem;
+
+      i {
+        display: none;
+      }
+
+      img {
+        display: inline-block;
+        max-height: 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.our-values {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    .item {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        
+        img {
+            width: 100%;
+            min-height: 250px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .our-values {
+        gap: 0;
+
+        .item {
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+
+            .content {
+                padding: 3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            img {
+                border-radius: 0;
+                min-height: 400px;
+            }
+        }
+    }
+}
