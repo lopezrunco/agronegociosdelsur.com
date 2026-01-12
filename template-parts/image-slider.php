@@ -31,7 +31,7 @@ function resolve_service_url($slug) {
                         <?php
                             $url = resolve_service_url($service['url']);
                             $btnText = esc_html($service['btnText']);
-                            echo '<a class="btn btn-secondary" href="' . esc_url($url) . '">' . $btnText . ' <i class="fa-solid fa-chevron-right"></i></a>'
+                            echo '<a class="btn btn-primary" href="' . esc_url($url) . '">' . $btnText . ' <i class="fa-solid fa-chevron-right"></i></a>'
                         ?>
                     </div>
                 </div>

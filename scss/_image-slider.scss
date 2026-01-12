@@ -34,18 +34,19 @@
 
                 h1 {
                     color: var(--white);
-                    text-shadow: var(--text-shadow);
                     font-size: 2rem;
                     text-transform: uppercase;
                     font-weight: 700;
-
-
+                    text-shadow: var(--text-shadow);
                 }
 
                 h6 {
+                    width: fit-content;
                     margin: 2rem 0;
+                    padding: 1rem 2rem;
+                    font-weight: 700;
                     color: var(--white);
-                    text-shadow: var(text-shadow);
+                    background-color: var(--darktransparent);
                 }
 
                 a.btn {
@@ -88,11 +89,11 @@
             z-index: 2;
             top: 50%;
             transform: translateY(-50%);
-            height: 130px;
-            width: 50px;
+            height: 80px;
+            width: 80px;
             color: #ffffff8a;
             text-align: center;
-            line-height: 130px;
+            line-height: 80px;
             font-size: 30px;
             border-radius: var(--border-radius);
             margin: 0 .5rem;
@@ -108,9 +109,14 @@
             right: 0;
         }
 
+        .prev,
+        .next {
+            background-color: var(--gray);
+        }
+
         .prev:hover,
         .next:hover {
-            background-color: var(--white-transparent);
+            background-color: var(--primary);
         }
 
     }
@@ -120,7 +126,8 @@
         right: 50%;
         bottom: 2rem;
         transform: translateX(50%);
-        display: flex;
+        // display: flex;
+        display: none;
         flex-direction: row;
 
         div {
@@ -150,7 +157,7 @@
                 justify-content: center;
 
                 .caption {
-                    width: 40%;
+                    width: 80%;
                     text-align: left;
 
                     h1 {

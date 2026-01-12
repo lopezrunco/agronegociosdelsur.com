@@ -28,23 +28,74 @@
 </head>
 
 <body>
-    <header class="fixed-top">
-        <nav class="navbar navbar-expand-xl bg-white py-lg-0">
-            <div class="container py-4 fade-in delay-level1">
+<header class="fixed-top">
+        <div class="top d-none d-md-block">
+            <div class="container fade-in delay-level1">
+                <div class="row">
+                    <div class="col-6">
+                        <small>
+                            <a class="text-light"><i class="me-3 fa-solid fa-location-dot"></i> <?php echo $company_data['location'] ?></a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar bg-white navbar-expand-xl py-lg-0">
+            <div class="container fade-in delay-level2">
                 <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
                     <img class="main-logo" alt="Logo de Agronegocios del Sur" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" />
                 </a>
                 <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars menu-icon"></i>
                 </button>
-                <div class="collapse navbar-collapse py-3 pt-5 pt-lg-3 justify-content-end" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse py-3 justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <?php
+                            // Get the parent category by slug.
+                            $parent_category = get_term_by('slug', 'maquinaria-usada','product_cat');
+                            // Check if parent category exists.
+                            if ( $parent_category ) {
+                                // Get subcategories from the parent category.
+                                $subcategories = get_terms( array(
+                                    'taxonomy' => 'product_cat',
+                                    'parent' => $parent_category->term_id,
+                                    'orderby' => 'name',
+                                    'order' => 'ASC',
+                                    'hide_empty' => false
+                                ) );
+
+                                // Check if sub categories exist.
+                                if (! empty( $subcategories ) && ! is_wp_error( $subcategories )) {
+                                    // Generate main menu item with dropdown.
+                                    echo '<li class="nav-link dropdown">';
+                                        echo '<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Maquinaria usada</a>';
+                                            // Generate dropdown menu with sub categories.
+                                        echo '<ul class="dropdown-menu" aria-labelledby="navbarDropdown">';
+                                            foreach ($subcategories as $subcategory) {
+                                                echo '
+                                                    <li>
+                                                        <a class="dropdown-item" href="' . get_term_link( $subcategory ) . '">' . $subcategory->name  .'</a>
+                                                    </li>
+                                                ';
+                                            }
+                                        echo '</ul>';
+                                    echo '</li>';
+                                } else {
+                                    echo '<p>No se encontraron categorías.</p>';
+                                }
+                            } else {
+                                echo '<p>No se encontró la categoria padre.</p>';
+                            }
+                        ?>
+                    </ul>
                     <?php
                     // Main menu
                     wp_nav_menu(array(
                         'menu' => 'primary',
                         'container' => '',
                         'theme_location' => 'primary',
-                        'items_wrap' => '<ul class="navbar-nav mb-2 mb-lg-0 gap-3">%3$s</ul>',
+                        'items_wrap' => '<ul class="navbar-nav mb-2 mb-lg-0">%3$s</ul>',
                         'fallback_cb' => false
                     ));
                     ?>
@@ -54,8 +105,6 @@
         </nav>
     </header>
 
-
-
     <div class="main-wrapper">
         <?php if (!is_front_page() && !is_404()) : ?>
             <header class="page-title">
@@ -64,7 +113,7 @@
                         <i class="me-3 fa-solid fa-location-dot"></i> Inicio |
                         <?php
                             if (function_exists('is_shop') && is_shop()) {
-                                echo 'Tienda';
+                                echo 'Maquinaria usada';
                             } elseif (is_search()) {
                                 printf('Resultados: %s', get_search_query());
                             } elseif (is_archive()) {
