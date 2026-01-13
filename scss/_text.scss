@@ -42,10 +42,10 @@ h6 {
 
 // Bootstrap override
 a {
-    color: var(--gray) !important;
+    color: var(--secondary) !important;
     
     &:hover {
-        color: var(--gray-dark) !important;
+        color: var(--primary) !important;
         text-decoration: none !important;
     }
 }

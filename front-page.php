@@ -3,7 +3,5 @@ get_header();
 get_template_part('template-parts/image-slider');
 get_template_part('template-parts/about-us');
 get_template_part('template-parts/latest-products');
-get_template_part('template-parts/featured-services');
-get_template_part('template-parts/video-thumbs');
 get_footer();
 ?>

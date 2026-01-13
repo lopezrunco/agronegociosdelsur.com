@@ -13,8 +13,8 @@
 			echo '
                 <div class="section-title-more">
                     <div>
-                        <span class="top-title">Explore nuestros productos</span>
-                        <h2>Casillas agrícolas</h2>
+                        <span class="top-title">Explore nuestro catálogo</span>
+                        <h2>Maquinaria usada</h2>
                     </div>
                     <div>
                         <a class="btn btn-secondary d-none d-lg-inline-block" href="' . esc_url($shop_page_url) . '">Ver más <i class="fa-solid fa-chevron-right"></i></a>
