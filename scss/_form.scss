@@ -1,11 +1,10 @@
 form {
-
     input,
     textarea {
         border: 1px solid var(--light);
         border-radius: var(--border-radius);
         background-color: var(--darkwhite);
-        outline: none;
+        outline: 1px solid var(--light-primary);
         color: var(--gray);
         padding: .3rem 1rem;
     }
@@ -29,7 +28,7 @@ form {
     }
 
     input[type="submit"] {
-        border-radius: 20px !important;
+        border-radius: var(--border-radius) !important;
         padding: .4rem 2rem !important;
         display: flex !important;
         flex-direction: row !important;
