@@ -105,21 +105,29 @@ small {
     background: linear-gradient(0deg, var(--dark-primary) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-.paws-overlay {
-    background-image: url('./assets/images/paw-pattern.png');
-}
-
 .box-shadow {
     box-shadow: var(--box-shadow);
 }
 
-.section-title {
-    margin: 0 auto;
-    margin-bottom: 3rem;
-    text-align: center;
+.hard-shadow {
+    box-shadow: var(--hard-shadow);
+}
 
-    h2 {
-        margin-bottom: 1rem;
+.section-title {
+    margin-bottom: 1rem;
+    text-align: left;
+
+    span.line::before {
+        content: '';
+        width: 4rem;
+        background-color: var(--gray-dark);
+        height: .2rem;
+        margin-right: 2rem;
+        display: block;
+    }
+
+    h6 {
+        display: inline-block;
     }
 }
 
