@@ -1,5 +1,5 @@
 <a 
-    href="https://api.whatsapp.com/send/?phone=59899354108&text=Hola%2C+deseo+hacer+una+consulta%E2%80%A6&type=phone_number&app_absent=0" 
+    href="https://api.whatsapp.com/send/?phone=59892251334&text=Hola%2C+deseo+hacer+una+consulta%E2%80%A6&type=phone_number&app_absent=0" 
     target="_blank" 
     rel="noreferrer" 
     class="wapp-link fade-in delay-level2"
