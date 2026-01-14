@@ -95,3 +95,8 @@ header {
     font-weight: 700;
     font-size: 14px;
 }
+
+.dropdown-item.active, 
+.dropdown-item:active {
+    background-color: var(--secondary);
+}

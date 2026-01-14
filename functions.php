@@ -193,3 +193,24 @@ add_action('get_footer', 'display_bag_popup_on_cart_page');
 
 // Load theme config file.
 require_once get_template_directory() . '/config.php';
+
+// Add ask for more product info button.
+add_action('woocommerce_single_product_summary', 'add_wapp_info_button', 25);
+
+function add_wapp_info_button() {
+    global $product;
+
+    if (! $product) { return; }
+
+    $product_title = $product->get_name();
+    $encoded_title = urlencode($product_title);
+    $phone = '59892251334';
+
+    $wapp_url = "https://api.whatsapp.com/send/?phone={$phone}&text=Hola%2C+quisiera+consultar+el+precio+de:+{$encoded_title}&type=phone_number&app_absent=0";
+    ?>
+
+    <a href="<?php echo esc_url( $wapp_url ); ?>" target="_blank" rel="noreferrer" class="btn btn-primary" >
+        <i class="fa-brands fa-whatsapp"></i> Consultar precio
+    </a>
+    <?php
+}
