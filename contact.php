@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <section>
-    <article class="container">
+    <article class="container fade-in delay-level2">
         <div class="row">
             <div class="col-lg-5 mb-5">
                 <?php get_template_part('template-parts/contact-info'); ?>
@@ -22,10 +22,10 @@ get_header();
                 </div>
                 <?php
                 // Dev form
-                echo do_shortcode('[contact-form-7 id="5f9fe5f" title="Formulario de contacto"]');
+                // echo do_shortcode('[contact-form-7 id="5f9fe5f" title="Formulario de contacto"]');
 
                 // Prod form
-                // echo do_shortcode('[contact-form-7 id="63d971a" title="Formulario de contacto"]'); 
+                echo do_shortcode('[contact-form-7 id="c25c7a8" title="Formulario de contacto"]'); 
                 ?>
             </div>
             <div class="col-12">

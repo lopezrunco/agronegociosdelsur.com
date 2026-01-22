@@ -3,7 +3,7 @@
     class="call-to-action"
 >
     <article class="gray-overlay">
-        <div class="container">
+        <div class="container fade-in delay-level2">
             <div class="content-wrapper">
                 <h6><?php echo esc_html($cta_subtitle); ?></h6>
                 <h1><?php echo esc_html($cta_title); ?></h1>
