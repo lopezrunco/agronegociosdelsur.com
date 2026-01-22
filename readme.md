@@ -183,7 +183,7 @@ Some components use the company description. To customize it, go to the Wordpres
 ## JSON Abstraction of static content:
 
 ### Purpose:
-I store static data in a JSON files located in the theme's data directory. This allows for easy management and retrieval of data without hardcoding in PHP files.
+I stored static data in a JSON files located in the theme's data directory. This allows for easy management and retrieval of data without hardcoding in PHP files.
 
 Please note that the JSON data files are not included in the GitHub project. You will need to create these files manually in the `data` directory of the theme. Ensure the JSON files are structured accordingly:
 
@@ -206,16 +206,6 @@ services.json
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "icon": "fa-solid fa-bone"
     },
-    ... Add more as you need.
-]
-```
-
-videos.json
-```json
-[
-    "working-1.mp4",
-    "working-2.mp4",
-    "working-3.mp4",
     ... Add more as you need.
 ]
 ```

@@ -356,7 +356,25 @@ header.content-header {
     }
 }
 
-// Hide free shipping options in cart.
-.wc-block-components-totals-shipping {
-	display: none !important;
+nav.product-category-list {
+    overflow: hidden;
+    
+    .product-category-item {
+        margin-bottom: .5rem;
+
+        a {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+
+            img.category-thumb {
+                max-width: 35px;
+                height: auto;
+                object-fit: contain;
+                border-radius: 50%;
+            }
+        }
+    }
 }
