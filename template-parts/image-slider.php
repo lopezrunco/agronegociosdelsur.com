@@ -9,12 +9,21 @@ if (file_exists(SERVICES_DATA_PATH)) {
 }
 
 function resolve_service_url($slug) {
-    switch ($slug) {
-        case 'shop':
-            return get_permalink(wc_get_page_id('shop'));
-        default:
-            return get_permalink(get_page_by_path($slug));
+    // Resolve to woocommerce shop page.
+    if ($slug === 'shop') {
+        return get_permalink(wc_get_page_id('shop'));
     }
+
+    // Resolve to wocommerce product category page.
+    $term = get_term_by('slug', $slug, 'product_cat');
+    if ($term && !is_wp_error($term)) { return get_term_link($term); }
+
+    // Fallback to a regular page.
+    $page = get_page_by_path($slug);
+    if ($page) { return get_permalink($page); }
+
+    // Fallback.
+    return home_url('/');
 }
 ?>
 
