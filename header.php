@@ -49,7 +49,7 @@
                 <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars menu-icon"></i>
                 </button>
-                <div class="collapse navbar-collapse py-3 justify-content-end" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <?php
                             // Get the parent category by slug.
@@ -108,25 +108,27 @@
     <div class="main-wrapper">
         <?php if (!is_front_page() && !is_404()) : ?>
             <header class="page-title">
-                <div class="container fade-in delay-level2">
-                    <p class="heading">
-                        <i class="me-3 fa-solid fa-location-dot"></i> Inicio |
-                        <?php
+                <div class="gray-overlay">
+                    <div class="container fade-in delay-level2">
+                        <small class="heading">
+                            <i class="me-3 fa-solid fa-thumbtack"></i> <span>Inicio</span> |
+                            <?php
                             if (function_exists('is_shop') && is_shop()) {
                                 echo 'Maquinaria usada';
-                            } elseif (is_search()) {
-                                printf('Resultados: %s', get_search_query());
-                            } elseif (is_archive()) {
-                                the_archive_title();
-                            } elseif (is_single()) {
+                                } elseif (is_search()) {
+                                    printf('Resultados: %s', get_search_query());
+                                    } elseif (is_archive()) {
+                                        the_archive_title();
+                                        } elseif (is_single()) {
                                 the_title();
                             } elseif (is_page()) {
                                 the_title();
-                            } else {
-                                the_title();
+                                } else {
+                                    the_title();
                             }
-                        ?>
-                    </p>
+                            ?>
+                        </small>
+                    </div>
                 </div>
             </header>
         <?php endif; ?>

@@ -85,6 +85,20 @@ header {
     }
 }
 
+@media screen and (max-width: 1200px) {
+    header {
+        nav {
+            .container {
+                li.nav-link {
+                    &:hover {
+                        background-color: var(--white);
+                    }
+                }
+            }
+        }
+    }
+}
+
 .dropdown-menu {
     border-radius: var(--border-radius);
 }

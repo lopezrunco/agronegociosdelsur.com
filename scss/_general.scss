@@ -85,7 +85,7 @@ small {
 
 @media screen and (min-width: 992px) {
     .main-wrapper {
-        margin-top: 8.7rem;
+        margin-top: 6.7rem;
     }
 }
 
@@ -162,14 +162,22 @@ small {
     position: sticky;
     z-index: 10;
     top: 0;
-    text-align: left;
-    background-color: var(--primary);
-    padding: .5rem 0;
+    text-align: center;
+    background-image: url(./assets/images/page-title.jpg);
     transition: all .2s;
-
-    .heading {
-        color: var(--light);
-        margin-bottom: 0;
+    
+    .gray-overlay {
+        padding: .5rem 0;
+        
+        .heading {
+            color: var(--light);
+            margin-bottom: 0;
+            
+            i,
+            span {
+                color: var(--yellow);
+            }
+        }
     }
 }
 
