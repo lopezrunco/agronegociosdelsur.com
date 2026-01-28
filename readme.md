@@ -177,7 +177,7 @@ Some components use the company description. To customize it, go to the Wordpres
 
 ### Run SASS command:
 ```sh
-    sass --watch scss/style.scss style.css
+    sass --watch scss/styles.scss style.css
 ```
 
 ## JSON Abstraction of static content:
