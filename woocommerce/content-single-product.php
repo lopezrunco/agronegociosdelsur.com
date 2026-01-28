@@ -34,7 +34,7 @@ if ( post_password_required() ) {
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
     <div class="row">
-        <div class="col-md-6 px-5 pb-5">
+        <div class="col-md-6">
             <?php
             /**
              * Hook: woocommerce_before_single_product_summary.

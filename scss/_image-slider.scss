@@ -41,9 +41,10 @@
                 }
 
                 h6 {
+                    font-size: .9rem;
                     width: fit-content;
                     margin: 2rem 0;
-                    padding: 1rem 2rem;
+                    padding: 1rem;
                     font-weight: 700;
                     color: var(--white);
                     background-color: var(--darktransparent);
@@ -126,7 +127,6 @@
         right: 50%;
         bottom: 2rem;
         transform: translateX(50%);
-        // display: flex;
         display: none;
         flex-direction: row;
 
@@ -162,6 +162,11 @@
 
                     h1 {
                         font-size: 4rem;
+                    }
+
+                    h6 {
+                        font-size: 1.2rem;
+                        padding: 1rem 2rem;
                     }
                 }
             }

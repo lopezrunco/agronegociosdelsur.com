@@ -1,4 +1,4 @@
-<section class="product-grid">
+<section class="product-grid bg-light">
 	<article class="container fade-in delay-level2">
 		<?php
 		$latest_products = wc_get_products(

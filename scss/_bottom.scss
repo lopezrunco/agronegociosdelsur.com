@@ -8,9 +8,12 @@
 
         h4,
         p,
-        a,
-        i {
+        a {
             color: var(--light) !important;
+        }
+
+        i {
+            color: var(--yellow) !important;
         }
 
         img {

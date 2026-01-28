@@ -6,7 +6,7 @@ if (file_exists(COMPANY_DATA_PATH)) {
 }
 ?>
 
-<section class="company-description bg-light">
+<section class="company-description">
     <article class="container fade-in delay-level2">
         <div class="row">
             <div class="d-none d-md-block col-md-5">

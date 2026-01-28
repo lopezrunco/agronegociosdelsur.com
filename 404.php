@@ -4,13 +4,13 @@ get_header();
 
 <section>
     <article class="container fade-in delay-level2">
-        <div class="row text-center">
-            <div class="col-lg-6">
-                <h1 class="text-center not-found-title">404!</h1>
-                <h2 class="text-center mb-5">Página no encontrada</h2>
-                <a href="<?php echo esc_url(home_url('/')); ?>" class="text-center"><i class="fa-solid fa-house"></i> Volver a inicio</a>
+        <div class="row">
+            <div class="col-lg-6 mb-5 text-center">
+                <h1 class="not-found-title">404!</h1>
+                <h2 class="mb-5">Página no encontrada</h2>
+                <a href="<?php echo esc_url(home_url('/')); ?>"><i class="fa-solid fa-house"></i> Volver a inicio</a>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 text-center text-md-left">
                 <div class="mb-5">
                     <p>
                         La página que busca ha sido movida o eliminada.
