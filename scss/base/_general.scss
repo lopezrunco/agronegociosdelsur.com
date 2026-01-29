@@ -62,7 +62,20 @@ small {
 
 // Bootstrap overrides Product image gallery
 .modal-dialog {
-    max-width: 620px !important;
+    max-width: 700px !important;
+
+    .modal-content {
+        border: none;
+        border-radius: 0;
+
+        .modal-body {
+            padding: 0;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
 }
 
 // Bootstrap overrides
