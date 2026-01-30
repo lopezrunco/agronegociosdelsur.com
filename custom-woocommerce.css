@@ -240,21 +240,43 @@ form.woocommerce-ordering select.orderby {
 #sidebar .wp-block-heading {
     font-size: 1.2rem;
     font-weight: 700;
+    margin-bottom: 1.5rem;
 }
 
 #sidebar ul {
     list-style: none;
+    padding-left: 0;
 }
 
 #sidebar>ul {
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    padding-left: 1rem;
 }
 
 #sidebar ul>div ul li {
-    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: .5rem 0;
+    background-color: var(--lightgray);
+    font-weight: 700;
+    transition: var(--main-transition);
+}
+
+#sidebar ul>div ul li:hover,
+#sidebar ul>div ul li:active {
+    background-color: var(--light);
+    transform: translateX(.5rem);
+}
+
+#sidebar ul>div ul li a {
+    width: 80%;
+    display: inline-flex;
+    padding: 1rem;
+    color: var(--dark);
     transition: var(--main-transition);
 }
 
