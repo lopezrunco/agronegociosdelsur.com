@@ -13,7 +13,7 @@
 			));
 			echo '
                 <div class="section-title">
-                    <h2>¿A quién vas a mimar hoy?</h2>
+                    <h2>Section title here</h2>
                 </div>
             ';
 
@@ -88,7 +88,7 @@
 				echo '<p>No se encontraron categorias de producto.</p>';
 			}
 		} else {
-			echo '<p>No se encontraró la categoria padre Especies.</p>';
+			echo '<p>No se encontraró la categoria padre.</p>';
 		}
 		?>
 	</article>

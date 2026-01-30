@@ -17,7 +17,7 @@
 			echo '
             <div class="section-title-more">
                 <div>
-                    <span class="top-title">Te ayudamos a cuidarlos</span>
+                    <span class="top-title">Top title here</span>
                     <h2>' . esc_html($category->name) . '</h2>
                 </div>
                 <div>

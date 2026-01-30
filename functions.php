@@ -3,7 +3,6 @@
 // Define paths constants
 define('COMPANY_DATA_PATH', get_template_directory() . '/data/company.json');
 define('SERVICES_DATA_PATH', get_template_directory() . '/data/services.json');
-define('VIDEOS_DATA_PATH', get_template_directory() . '/data/videos.json');
 define('NO_IMAGE_PLACEHOLDER', get_template_directory_uri() . '/assets/images/no-image-default.jpg');
 
 function starterwptheme_theme_support()
@@ -159,37 +158,6 @@ function custom_search_form( $form ) {
     return $form;
 }
 add_filter( 'get_search_form', 'custom_search_form' );
-
-function display_bag_popup_on_cart_page() {
-    if (is_cart()) {
-        $bag_product_id = 38; // Replace in production for 1117.
-        $bag_in_cart = false;
-
-        // WC() function return the Wocommerce object.
-        // cart is a property returned by WC().
-        // get_cart() returns the current items in the cart to be iterated by the loop.
-        foreach (WC() -> cart -> get_cart() as $cart_item) {
-            if ($cart_item['product_id'] == $bag_product_id) {
-                $bag_in_cart = true;
-                break;
-            }
-        }
-
-        if (!$bag_in_cart) {
-            echo '<div class="container">
-                    <div class="bag-popup">
-                        <a href="#" class="add-bag-button" data-product-id="' . esc_attr($bag_product_id) . '">    
-                            <i class="fa-solid fa-bag-shopping"></i>
-                            <img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/bag.png" alt="Bolsa" />
-                            <p>¿Deseas incluir una bolsa?</p>
-                        </a>
-                    </div>
-                </div>';
-        }
-    }
-}
-
-add_action('get_footer', 'display_bag_popup_on_cart_page');
 
 // Load theme config file.
 require_once get_template_directory() . '/config.php';

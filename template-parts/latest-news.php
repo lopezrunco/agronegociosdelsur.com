@@ -15,8 +15,8 @@
 				<div class="section-title">
 					<h2>Novedades recientes</h2>
 					<p>
-						Explora las últimas novedades y tendencias en el fascinante mundo de las mascotas.
-						Mantente al día con los últimos productos, eventos y descubrimientos que harán que la vida junto a tu mascota sea aún más especial.
+						Explora las últimas novedades y tendencias.
+						Mantente al día con los últimos productos, eventos y descubrimientos.
 					</p>
 				</div>
 			';
